@@ -4,8 +4,8 @@ angular.module("myApp")
 		.when("/news", {
 			templateUrl: "view/news.html"
 		})
-		.when("/intro", {
-			templateUrl: "view/intro.html"
+		.when("/profile", {
+			templateUrl: "view/profile.html"
 		})
 		.when("/info", {
 			templateUrl:"view/info.html"
