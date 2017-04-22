@@ -2,43 +2,15 @@
 	<div class="searchInfo clearfix input-group">
 		<div class="infoTitle">消息</div>
 		<div class="search">
-			<input type="text" placeholder="查找消息记录" class="form-control">
+			<input type="text" placeholder="查找消息记录" class="form-control" ng-model="str">
 		</div>
 	</div>
 	<div class="list-group">
-		<a class="list-group-item clearfix">
-			<div class="infoAvatar"><img class="img-circle" src="images/a5.jpg"></div>
+		<a class="list-group-item clearfix" ng-repeat="x in info" ng-show="x.info.indexOf(str) != -1">
+			<div class="infoAvatar"><img class="img-circle" ng-src="{{x.avatar}}"></div>
 			<div class="infoContent">
-				<div class="userName">悠懒瑶瑶</div>
-				<div class="userInfo">欢迎关注</div>
-			</div>
-		</a>
-		<a class="list-group-item clearfix">
-			<div class="infoAvatar"><img class="img-circle" src="images/a6.jpg"></div>
-			<div class="infoContent">
-				<div class="userName">iG_Lucio</div>
-				<div class="userInfo">hi(=′ー`) ,谢谢你的关注与支持！消息我有时间都会回复，我们会继续努力的！</div>
-			</div>
-		</a>
-		<a class="list-group-item clearfix">
-			<div class="infoAvatar"><img class="img-circle" src="images/a7.jpg"></div>
-			<div class="infoContent">
-				<div class="userName">帅气可爱无敌迷人的妈妈的大</div>
-				<div class="userInfo">谢谢你关注了我！！你真可爱！！</div>
-			</div>
-		</a>
-		<a class="list-group-item clearfix">
-			<div class="infoAvatar"><img class="img-circle" src="images/a8.jpg"></div>
-			<div class="infoContent">
-				<div class="userName">小绝Drug补给站</div>
-				<div class="userInfo">感谢关注(◍ ´꒳` ◍)恭喜你发现了一只小绝drug中毒重症患者！</div>
-			</div>
-		</a>
-		<a class="list-group-item clearfix">
-			<div class="infoAvatar"><img class="img-circle" src="images/a9.jpg"></div>
-			<div class="infoContent">
-				<div class="userName">小绝QAQ</div>
-				<div class="userInfo">感谢关注！！有什么想说的可以直接告诉我！！</div>
+				<div class="userName">{{x.name}}</div>
+				<div class="userInfo">{{x.info}}</div>
 			</div>
 		</a>
 	</div>
